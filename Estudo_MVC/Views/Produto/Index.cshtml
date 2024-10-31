@@ -1,0 +1,20 @@
+﻿@* Index.cshtml *@
+@model IEnumerable<Estudo_MVC.Models.Produto>
+
+<h1>Produtos</h1>
+
+<form id="produtoForm">
+    <input type="hidden" id="produtoId" />
+    <input type="text" id="produtoNome" placeholder="Nome" required />
+    <input type="text" id="produtoDescricao" placeholder="Descrição" required />
+    <input type="number" id="produtoPreco" placeholder="Preço" required step="0.01" />
+    <input type="number" id="produtoQuantidade" placeholder="Quantidade" required />
+    <button type="button" onclick="salvarProduto()">Salvar</button>
+</form>
+
+<button type="button" onclick="obterProdutos()">Listar Produtos</button>
+
+<div class="lista-produtos" id="listaProdutos"></div>
+
+<link rel="stylesheet" href="~/css/styles.css" />
+<script asp-src="~/js/produto.js"></script>
